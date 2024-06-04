@@ -31,7 +31,7 @@ public class UserDetailService implements UserDetailsService {
 
         User user =optionalUser.get();
         GrantedAuthority authority=new SimpleGrantedAuthority("USER");
-        return new org.springframework.security.core.userdetails.User(user.getFirstName(),passwordEncoder.encode(user.getPassword()), Collections.singleton(authority));
+        return new org.springframework.security.core.userdetails.User(user.getFirstName(),user.getPassword(), Collections.singleton(authority));
 
     }
 }
