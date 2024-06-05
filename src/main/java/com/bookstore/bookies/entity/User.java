@@ -1,10 +1,9 @@
 package com.bookstore.bookies.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -22,4 +21,12 @@ public class User {
     private String email;
     private long mobileNumber;
     private String password;
+    @ManyToMany
+    @JoinTable(
+            name = "assigned_roles",
+            joinColumns = @JoinColumn(name="user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    Set<Roles> roles;
+
 }

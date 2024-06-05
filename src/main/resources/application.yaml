@@ -3,7 +3,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: admin123#BrijeshChauhan12
-    url: jdbc:mysql://localhost:3306/ET
+    url: jdbc:mysql://localhost:3306/ET3
     username: admin
   jpa:
     hibernate:
