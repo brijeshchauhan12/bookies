@@ -24,7 +24,7 @@ public class Login {
                     new UsernamePasswordAuthenticationToken(authRequest.getUsername(),authRequest.getPassword()));
             if (authentication.isAuthenticated()) {
                 return "Login successful";
-            }
+            }  
 //            System.out.println(authRequest.toString());
         } catch (AuthenticationException e) {
             return "Login failed";
