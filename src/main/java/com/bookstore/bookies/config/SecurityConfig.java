@@ -41,7 +41,7 @@ public class SecurityConfig  {
                 .authorizeHttpRequests(
                         authorize->
                                 authorize.requestMatchers(AntPathRequestMatcher.antMatcher("/auth/**")).permitAll()
-                                .requestMatchers(AntPathRequestMatcher.antMatcher("/us/**")).permitAll()
+                                .requestMatchers(AntPathRequestMatcher.antMatcher("/u/**")).permitAll()
                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/us/**")).authenticated()
 
 
