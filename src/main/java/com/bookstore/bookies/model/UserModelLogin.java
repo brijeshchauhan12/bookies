@@ -1,12 +1,16 @@
 package com.bookstore.bookies.model;
 
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserModel {
-    private String firstName;
-    private String lastName;
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Data
+public class UserModelLogin {
     private String email;
-    private long mobileNumber;
+
     private String password;
 }
